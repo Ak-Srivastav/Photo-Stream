@@ -19,24 +19,24 @@ import createClient from 'ioredis';
 
 console.log("REDIS:", REDIS_HOST, REDIS_PORT, REDIS_PASSWORD)
 
-// const redis = new createClient({
-//   password: REDIS_PASSWORD,
-//   socket: {
-//     host: REDIS_HOST,
-//     port: parseInt(process.env.REDIS_PORT)
-//   }
-// });
+import { createClient } from 'redis';
 
-// const redis = new createClient({
-//   url: ":6379",  // works from Docker!
-// });
 
 const redis = new createClient({
-  // host: 'localhost',
-  host:'redis-ds',
-  port: 6379,
-  password: 'password'
+  password: REDIS_PASSWORD,
+  socket: {
+    host: REDIS_HOST,
+    port: 12645
+  }
 });
+
+// const redis = new createClient({
+//   // host: 'localhost',
+//   host:'redis-ds',
+//   port: 6379,
+//   password: 'password'
+// });
+
 
 
 export default redis;
