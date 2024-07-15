@@ -15,11 +15,9 @@ import { REDIS_HOST, REDIS_PASSWORD, REDIS_PORT, REDIS_USERNAME } from "./index.
 //   console.log("err", err);
 // }
 
-import createClient from 'ioredis';
-
 console.log("REDIS:", REDIS_HOST, REDIS_PORT, REDIS_PASSWORD)
 
-import { createClient } from 'redis';
+import createClient from 'ioredis';
 
 
 const redis = new createClient({
