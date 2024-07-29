@@ -141,6 +141,7 @@ export const logOut =
   };
 
 export const loginWithGoogle = () => () => {
+  console.log(SERVER_DEV_API, SERVER_PROD_API, MODE);
   window.open(
     `${MODE === "dev" ? SERVER_DEV_API : SERVER_PROD_API}/api/v1/auth/google`,
     "_self"
