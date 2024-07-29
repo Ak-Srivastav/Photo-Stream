@@ -141,18 +141,12 @@ export const logOut =
   };
 
 export const loginWithGoogle = () => () => {
-  console.log("logging with google");
   window.open(
-    `https://photo-stream-uxkd.onrender.com/api/v1/auth/google`,
+    `${MODE === "dev" ? SERVER_DEV_API : SERVER_PROD_API}/api/v1/auth/google`,
     "_self"
   );
-  // window.open(
-  //   `${MODE === "dev" ? SERVER_DEV_API : SERVER_PROD_API}/api/v1/auth/google`,
-  //   "_self"
-  // );
 };
 export const loginWithFacebook = () => () => {
-  console.log("logging with facebook\n", SERVER_DEV_API, SERVER_PROD_API);
   window.open(
     `${MODE === "dev" ? SERVER_DEV_API : SERVER_PROD_API}/api/v1/auth/facebook`,
     "_self"
