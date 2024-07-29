@@ -1,13 +1,13 @@
-import redis from "../../config/redis.js";
+// import redis from "../../config/redis.js";
 
 const logoutController = {
   async logout(req, res, next) {
     try {
-      await redis.rpush("blacklist", req.user.access_token);
-      const refresh_token = req?.cookies?.refresh_token?.split(" ")[1];
-      if (refresh_token) {
-        await redis.rpush("blacklist", refresh_token);
-      }
+      // await redis.rpush("blacklist", req.user.access_token);
+      // const refresh_token = req?.cookies?.refresh_token?.split(" ")[1];
+      // if (refresh_token) {
+      //   await redis.rpush("blacklist", refresh_token);
+      // }
 
       return res
         .status(200)

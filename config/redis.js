@@ -15,18 +15,18 @@ import { REDIS_HOST, REDIS_PASSWORD, REDIS_PORT, REDIS_USERNAME } from "./index.
 //   console.log("err", err);
 // }
 
-console.log("REDIS:", REDIS_HOST, REDIS_PORT, REDIS_PASSWORD)
+// console.log("REDIS:", REDIS_HOST, REDIS_PORT, REDIS_PASSWORD)
 
-import createClient from 'ioredis';
+// import createClient from 'ioredis';
 
 
-const redis = new createClient({
-  password: REDIS_PASSWORD,
-  socket: {
-    host: REDIS_HOST,
-    port: 12645
-  }
-});
+// const redis = new createClient({
+//   password: REDIS_PASSWORD,
+//   socket: {
+//     host: REDIS_HOST,
+//     port: 12645
+//   }
+// });
 
 // const redis = new createClient({
 //   // host: 'localhost',
@@ -37,4 +37,4 @@ const redis = new createClient({
 
 
 
-export default redis;
+// export default redis;
